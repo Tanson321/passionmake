@@ -14,7 +14,7 @@
 body{
     margin:0;
     background-color:black;
-    transition-delay: 0.5s;
+    transition-delay: 1.2s;
 }
 
 #header{
@@ -54,7 +54,7 @@ body{
         background-color: #ffffff;
     }
 
-    50%{
+    70%{
         -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%, 0% 100%, 0% 0%);
         clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%, 0% 100%, 0% 0%);
         background-color: black;
@@ -85,13 +85,18 @@ body{
 
 .cover{
     width:100vw;
-    height: 100vh;
+    height: 100%;
     background-color: #ffffff;
     -webkit-clip-path: polygon(15% 0%, 85% 0%, 100% 15%, 100% 85%, 85% 100%, 15% 100%, 0% 85%, 0% 15%);
     clip-path: polygon(15% 0%, 85% 0%, 100% 15%, 100% 85%, 85% 100%, 15% 100%, 0% 85%, 0% 15%);
     animation-duration: 1s;
     animation-name: opening;
     animation-timing-function: ease;
+}
+
+.landing-wrapper{
+    height: auto;
+    animation-duration:2s;
 }
 
 .header-content{
@@ -122,6 +127,7 @@ body{
     align-content: space-around;
     align-items: center; 
     flex-direction: row;
+    margin-top: 3%;
 }
 
 .wrapper{
@@ -178,27 +184,6 @@ body{
     line-height: 80px;
 }
 
-.about-text{
-    visibility: hidden;
-    transition-delay: 1s;
-    color:black;
-    z-index: 100;
-}
-
-.story-text{
-    visibility: hidden;
-    transition-delay: 1s;
-    color:black;
-    z-index: 100;
-}
-
-.produce-text{
-    visibility: hidden;
-    transition-delay: 1s;
-    color:black;
-    z-index: 100;
-}
-
 #about-text{
     margin: 0 auto;
     width: 60vw;
@@ -246,11 +231,12 @@ body{
     align-items: center; 
     flex-direction: row;
     margin: 0 auto;
-    padding-top: 5vh;
+    margin-top: 3%;
+    padding-bottom: 3%;
     width:150px;
     height:64px;
     text-align: center;
-    animation-duration: 1s;
+    animation-duration: 2s;
 }
 
 .twcolor{
@@ -261,4 +247,65 @@ body{
 .base{
     margin-left:2vw;
     filter: brightness(0) invert(0);
+}
+
+@media only screen and (max-width: 1024px){
+    .header-content{
+        width:70vw;
+        height:auto;
+    }
+
+    .cover{
+        height:auto;
+        }
+
+    .header-content img{
+        margin-top: 0;
+        width: 70vw;
+        height: auto;
+        }
+    
+    .main{
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .wrapper{
+        margin: 5vh 2% 0 2%;
+        width: 70vw;
+        height: 90px;
+        background-color: black;
+        transition: 100ms;
+        animation-fill-mode: forwards;
+        animation-duration: 1s;
+        animation-name: fadeIn;
+    }
+
+    #about-text{
+        margin: 0 auto;
+        width: 80vw;
+        display: none;
+        transition-delay: 2s;
+        animation-duration: 2s;
+    }
+
+    #story-text{
+        padding-top:5vh;
+        margin: 0 auto;
+        width: 80vw;
+        display: none;
+        transition-delay: 2s;
+        animation-duration: 2s;
+    }
+
+    #produce-text{
+        padding-top:5vh;
+        margin: 0 auto;
+        width: 80vw;
+        display: none;
+        transition-delay: 2s;
+        animation-duration: 2s;
+    }
+
 }

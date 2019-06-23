@@ -15,9 +15,10 @@ $(".about-wrapper").click(function(){
     setTimeout(function(){
         $("#header").hide();
         $(".main").hide();
-        $(".links").hide();
         $("#about-text").show();
         $(".header-small").show();
+        $(".links").css('animation-name', "fadeIn");
+        $(".landing-wrapper").css('height', 'auto');
         $(".header-small").css('animation-name', "fadeIn");
         $("#about-text").css('animation-name', 'fadeIn');   
     },1000);
@@ -40,9 +41,10 @@ $(".story-wrapper").click(function(){
     setTimeout(function(){
         $("#header").hide();
         $(".main").hide();
-        $(".links").hide();
         $("#story-text").show();
         $(".header-small").show();
+        $(".links").css('animation-name', "fadeIn");
+        $(".landing-wrapper").css('height', 'auto');
         $(".header-small").css('animation-name', "fadeIn");
         $("#story-text").css('animation-name', 'fadeIn');   
     },1000);
@@ -65,9 +67,10 @@ $(".produce-wrapper").click(function(){
     setTimeout(function(){
         $("#header").hide();
         $(".main").hide();
-        $(".links").hide();
         $("#produce-text").show();
         $(".header-small").show();
+        $(".links").css('animation-name', "fadeIn");
+        $(".landing-wrapper").css('height', 'auto');
         $(".header-small").css('animation-name', "fadeIn");
         $("#produce-text").css('animation-name', 'fadeIn');   
     },1000);
