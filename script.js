@@ -17,7 +17,7 @@ $(".about-wrapper").click(function(){
         $("#main").hide();
         $("#about-text").show();
         $(".header-small").show();
-        $(".links").css('animation-name', "fadeIn");
+        $("#links").css('animation-name', "fadeIn");
         $(".landing-wrapper").css('height', 'auto');
         $(".header-small").css('animation-name', "fadeIn");
         $("#about-text").css('animation-name', 'fadeIn');   

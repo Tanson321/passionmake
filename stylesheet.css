@@ -11,9 +11,19 @@
     text-align: center;
 }
 
+.header-small a{
+    text-decoration: none;
+}
+
+.header-small p{
+    color: #000;
+    margin: 0;
+    opacity: 0.8;
+}
+
 body{
     margin:0;
-    background-color:black;
+    background-color:#000;
     transition-delay: 1.2s;
 }
 
@@ -26,13 +36,13 @@ body{
     0%{
         -webkit-clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%);
         clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%);
-        background-color: black;
+        background-color: #000;
     }
 
     100%{
         -webkit-clip-path: polygon(15% 0%, 85% 0%, 100% 15%, 100% 85%, 85% 100%, 15% 100%, 0% 85%, 0% 15%);
         clip-path: polygon(15% 0%, 85% 0%, 100% 15%, 100% 85%, 85% 100%, 15% 100%, 0% 85%, 0% 15%);
-        background-color: #ffffff;
+        background-color: #fff;
     }
 }
 
@@ -51,19 +61,19 @@ body{
     0%{
         -webkit-clip-path: polygon(15% 0%, 85% 0%, 100% 15%, 100% 85%, 85% 100%, 15% 100%, 0% 85%, 0% 15%);
         clip-path: polygon(15% 0%, 85% 0%, 100% 15%, 100% 85%, 85% 100%, 15% 100%, 0% 85%, 0% 15%);
-        background-color: #ffffff;
+        background-color: #fff;
     }
 
     70%{
         -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%, 0% 100%, 0% 0%);
         clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%, 0% 100%, 0% 0%);
-        background-color: black;
+        background-color: 000;
     }
 
     100%{
         -webkit-clip-path: polygon(15% 0%, 85% 0%, 100% 15%, 100% 85%, 85% 100%, 15% 100%, 0% 85%, 0% 15%);
         clip-path: polygon(15% 0%, 85% 0%, 100% 15%, 100% 85%, 85% 100%, 15% 100%, 0% 85%, 0% 15%);
-        background-color: #ffffff;
+        background-color: #fff;
     }
 }
 
@@ -85,8 +95,8 @@ body{
 
 .cover{
     width:100vw;
-    height: 100%;
-    background-color: #ffffff;
+    min-height: 100vh;
+    background-color: #fff;
     -webkit-clip-path: polygon(15% 0%, 85% 0%, 100% 15%, 100% 85%, 85% 100%, 15% 100%, 0% 85%, 0% 15%);
     clip-path: polygon(15% 0%, 85% 0%, 100% 15%, 100% 85%, 85% 100%, 15% 100%, 0% 85%, 0% 15%);
     animation-duration: 1s;
@@ -99,6 +109,12 @@ body{
     animation-duration:2s;
 }
 
+.landing-wrapper h2{
+    
+    font-size: 30px;
+    text-align: center;
+}
+
 .header-content{
     display:flex;
     justify-content: center;
@@ -109,12 +125,7 @@ body{
     text-align: center;
 }
 
-.header-content h1{
-    font-family: 'Fjalla One', sans-serif;
-    font-size: 24px;
-    font-weight: normal;
-    display: none;
-}
+
 
 .header-content img{
     align-self: center;
@@ -134,7 +145,7 @@ body{
     margin: 13vh 2% 0 2%;
     width: 25vw;
     height: 90px;
-    background-color: black;
+    background-color: #000;
     transition: 100ms;
     animation-fill-mode: forwards;
     animation-duration: 1s;
@@ -157,7 +168,7 @@ body{
 .contentbox{
     height: 88px;
     margin: 1px 1px 1px 1px;
-    background-color: #ffffff;
+    background-color: #fff;
     transition:100ms;
 }
 
@@ -194,12 +205,10 @@ body{
 
 #about-text p{
     margin: 0;
-    line-height: 20px;
 }
 
 
 #story-text{
-    padding-top:5vh;
     margin: 0 auto;
     width: 60vw;
     display: none;
@@ -212,7 +221,6 @@ body{
 }
 
 #produce-text{
-    padding-top:5vh;
     margin: 0 auto;
     width: 60vw;
     display: none;
@@ -240,15 +248,37 @@ body{
 }
 
 .twcolor{
-    fill: currentColor;
     color:black;
     margin-right: 1.5vw;
 }
 
 .base{
     margin-left:1.5vw;
-    margin-right:1.5vw;
     filter: brightness(0) invert(0);
+}
+
+.list-group{
+    box-sizing: border-box;
+}
+
+.list-item{
+    padding: 25px 0 25px 0;
+}
+
+.date{
+    cursor : pointer;
+    color: #BCBEC1;
+    line-height: 25px;
+    display: inline-block;
+    margin: 3px 18px 0 0;
+    width: 98px;
+}
+
+.title{
+    cursor : pointer;
+    line-height: 28px;
+    display: inline-block;
+    width: calc( 100% - 18rem);
 }
 
 @media only screen and (max-width: 1024px){
@@ -277,7 +307,7 @@ body{
         margin: 5vh 2% 0 2%;
         width: 70vw;
         height: 90px;
-        background-color: black;
+        background-color: 000;
         transition: 100ms;
         animation-fill-mode: forwards;
         animation-duration: 1s;
@@ -293,7 +323,6 @@ body{
     }
 
     #story-text{
-        padding-top:5vh;
         margin: 0 auto;
         width: 80vw;
         display: none;
@@ -302,7 +331,6 @@ body{
     }
 
     #produce-text{
-        padding-top:5vh;
         margin: 0 auto;
         width: 80vw;
         display: none;
