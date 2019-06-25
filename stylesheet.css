@@ -224,7 +224,7 @@ body{
     margin: 0;
 }
 
-.links{
+#links{
     display: flex;
     justify-content: center;
     align-content: space-between;
@@ -240,12 +240,14 @@ body{
 }
 
 .twcolor{
+    fill: currentColor;
     color:black;
-    margin-right: 2vw;
+    margin-right: 1.5vw;
 }
 
 .base{
-    margin-left:2vw;
+    margin-left:1.5vw;
+    margin-right:1.5vw;
     filter: brightness(0) invert(0);
 }
 
