@@ -1,3 +1,5 @@
+
+
 $(".about-wrapper").click(function(){
     $("#cover").css('animation-duration', '2s');
     $('#cover').css("animation-name",'change');
@@ -9,6 +11,7 @@ $(".about-wrapper").click(function(){
     $(".story-wrapper").css('animation-name', 'fallDown');
     $(".about-wrapper").css('animation-delay', '0.6s');
     $(".about-wrapper").css('animation-name', 'fallDown');
+    history.pushState('', '', 'index.html');
 });
 
 $(".about-wrapper").click(function(){
@@ -20,7 +23,7 @@ $(".about-wrapper").click(function(){
         $("#links").css('animation-name', "fadeIn");
         $(".landing-wrapper").css('height', 'auto');
         $(".header-small").css('animation-name', "fadeIn");
-        $("#about-text").css('animation-name', 'fadeIn');   
+        $("#about-text").css('animation-name', 'fadeIn');  
     },1000);
 });
 
@@ -35,6 +38,7 @@ $(".story-wrapper").click(function(){
     $(".produce-wrapper").css('animation-name', 'fallDown');
     $(".story-wrapper").css('animation-delay', '0.6s');
     $(".story-wrapper").css('animation-name', 'fallDown');
+    history.pushState('', '', 'index.html');
 });
 
 $(".story-wrapper").click(function(){
@@ -61,6 +65,7 @@ $(".produce-wrapper").click(function(){
     $(".story-wrapper").css('animation-name', 'fallDown');
     $(".produce-wrapper").css('animation-delay', '0.6s');
     $(".produce-wrapper").css('animation-name', 'fallDown');
+    history.pushState('', '', 'index.html');
 });
 
 $(".produce-wrapper").click(function(){
@@ -75,3 +80,7 @@ $(".produce-wrapper").click(function(){
         $("#produce-text").css('animation-name', 'fadeIn');   
     },1000);
 });
+
+window.onpopstate = (function(){
+    location.replace('index.html');
+  });
